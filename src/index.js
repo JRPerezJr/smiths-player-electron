@@ -15,7 +15,7 @@ const createWindow = () => {
     minWidth: 940,
     minHeight: 560,
     frame: true,
-    icon: path.join(__dirname, 'img', 'favicon.png'),
+    icon: path.join(__dirname, 'logo.png'),
     title: 'The Smiths Player',
     webPreferences: {
       preload: path.join(__dirname, 'js', 'preload.js'),
