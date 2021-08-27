@@ -93,6 +93,7 @@ out/
 ._*
 .Spotlight-V100
 .Trashes
+/src/music
 
 # Editor directories and files
 .idea
