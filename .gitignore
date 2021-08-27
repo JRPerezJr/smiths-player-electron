@@ -96,6 +96,8 @@ out/
 .Spotlight-V100
 .Trashes
 /src/music
+.AppleDouble
+.LSOverride
 
 # Editor directories and files
 .idea
