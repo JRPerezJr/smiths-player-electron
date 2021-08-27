@@ -12,6 +12,8 @@
     "lint": "echo \"No linting configured\"",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
+    "dist-win": "electron-builder -w --x64",
+    "dist-linux": "electron-builder -l --x64",
     "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [],
@@ -25,16 +27,33 @@
     "copyright": "Copyright © 2021 Juan Perez",
     "compression": "normal",
     "linux": {
-      "target": "AppImage",
-      "category": "Music"
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "category": "Music",
+      "icon": "./src/logo.png"
     },
     "mac": {
       "category": "public.app-category.music",
+      "icon": "./src/logo.icns",
       "target": [
         "7z"
       ]
     },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./src/logo.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
     "nsis": {
+      "installerIcon": "./src/logo.ico",
+      "uninstallerIcon": "./src/logo.ico",
+      "uninstallDisplayName": "The Smiths Player",
+      "license": "license.txt",
       "oneClick": false,
       "perMachine": true,
       "allowToChangeInstallationDirectory": true
