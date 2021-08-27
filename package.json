@@ -9,7 +9,10 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [],
   "author": {
@@ -17,6 +20,26 @@
     "email": "pront23@gmail.com"
   },
   "license": "MIT",
+  "build": {
+    "appId": "com.jperezdevinjp.smiths-player",
+    "copyright": "Copyright © 2021 Juan Perez",
+    "compression": "normal",
+    "linux": {
+      "target": "AppImage",
+      "category": "Music"
+    },
+    "mac": {
+      "category": "public.app-category.music",
+      "target": [
+        "7z"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
   "config": {
     "forge": {
       "packagerConfig": {},
