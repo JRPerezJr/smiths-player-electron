@@ -10,12 +10,15 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1200,
+    height: 750,
+    minWidth: 940,
+    minHeight: 560,
+    frame: true,
     icon: path.join(__dirname, 'assets', 'img', 'favicon.png'),
     title: 'The Smiths Player',
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
+      preload: path.join(__dirname, 'js', 'preload.js'),
     },
   });
 
