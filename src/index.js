@@ -2,7 +2,8 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+if (require('electron-squirrel-startup')) {
+  // eslint-disable-line global-require
   app.quit();
 }
 
@@ -11,8 +12,14 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    icon: path.join(__dirname, 'assets', 'img', 'favicon.png'),
+    title: 'The Smiths Player',
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js'),
+    },
   });
 
+  mainWindow.setTitle('The Smiths Player');
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
