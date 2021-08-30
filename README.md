@@ -21,7 +21,7 @@
 
 <br>
 
-> A vanilla JS music project converted to an Electron application.
+> A vanilla JS music project converted to an Electron desktop application.
 
 ## 📐 Prerequisites
 
