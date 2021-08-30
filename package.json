@@ -1,8 +1,19 @@
 {
   "name": "smiths-player",
+  "private": true,
   "productName": "The Smiths Player",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "author": {
+    "name": "Juan",
+    "email": "pront23@gmail.com"
+  },
+  "license": "MIT",
+  "description": "The Smiths Music Application",
+  "engines": {
+    "node": "14.17.0",
+    "npm": "6.14.13",
+    "yarn": "1.22.10"
+  },
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -17,11 +28,6 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [],
-  "author": {
-    "name": "Juan",
-    "email": "pront23@gmail.com"
-  },
-  "license": "MIT",
   "build": {
     "appId": "com.jperezdevinjp.smiths-player",
     "copyright": "Copyright © 2021 Juan Perez",
